@@ -5,8 +5,6 @@ const sumAll = function(int1, int2) {
     let biggestInt;
     let smallestInt;
 
-
-
     if (int1 > int2) {
         biggestInt = int1;
         smallestInt = int2;
@@ -15,31 +13,15 @@ const sumAll = function(int1, int2) {
         smallestInt = int1;
     }
 
-
-    /*
-    if (int1 && int2 && smallestInt && biggestInt < 0) {
+    if (smallestInt <= 0 || biggestInt <= 0 
+        || typeof smallestInt !== 'number' || typeof biggestInt !== 'number') {
         return 'ERROR';
     }
 
-    if (typeof biggestInt || smallestInt == ' string') {
-        sum = 'ERROR';
-    }
-
-    */
-
-    for (smallestInt; smallestInt <= biggestInt; smallestInt++) {   
+    for (smallestInt; smallestInt <= biggestInt; smallestInt++) {
+        
         sum += smallestInt;
     }
-    
-    if (sum < 0 ) {
-        sum = 'ERROR';
-    }
-
-   
-    
-
-   
-
 
     return sum;
 };
